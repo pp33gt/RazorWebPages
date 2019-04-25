@@ -1,0 +1,28 @@
+﻿@page
+@model RazorWebPagesDemo.Pages.Demo.CreateModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<li><a asp-page="/Demo/Index">RazorDemo</a></li>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Movie" class="control-label"></label>
+                <input asp-for="Movie" class="form-control" />
+                <span asp-validation-for="Movie" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="OnPost" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
